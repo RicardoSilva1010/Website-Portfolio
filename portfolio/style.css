@@ -144,7 +144,9 @@ body {
   flex-direction: column;
 }
 
-
+.content_aboutme h1{
+  margin-bottom:0px ;
+}
 
 .aboutme img{
   width: 300px;
@@ -222,6 +224,22 @@ body {
   transform: translateY(2px);
 }
 
+.btn_CV {
+  width: 25%;
+  height: 60px;
+  border-radius: 10px;
+  border-color:  rgb(7, 76, 167);
+  color: #fff;
+  box-shadow: 0 0 40px 40px  rgb(7, 76, 167) inset, 0 0 0 0  rgb(7, 76, 167);
+  -webkit-transition: all 150ms ease-in-out;
+  transition: all 150ms ease-in-out;
+}
+.btn_CV:hover {
+  box-shadow: 0 0 10px 0 #3498db inset, 0 0 10px 4px #3498db;
+  color: #000000;
+}
+
+
 /* Float four columns side by side */
 .column {
   display: flex;
@@ -269,6 +287,8 @@ body {
 .description{
   margin-bottom: 20px;
 }
+
+
 
 
 

@@ -2,6 +2,12 @@
 
 html {font-size: 100%;} /*16px*/
 
+*{
+  text-decoration: none;
+  list-style: none;
+  scroll-behavior: smooth;
+}
+
 body {
   background: white;
   font-family: 'Poppins', sans-serif;
@@ -37,118 +43,163 @@ h6 {font-size: 0.75rem;;}
 small, .text_small {font-size: 0.8rem;}
 
 html , body {
-    padding: 0;
-    margin: 0;
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
 }
 
 body {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
-.background{
+.principal{
+  background-color: #000000;
   width: 100%;
-  height: 100vh;
-  background-color: black;
-  background-size: cover;
 }
 
-.bg_black{
-  background-color: rgba(0, 0, 0, 0.85);
+header{
   width: 100%;
-  height: 100vh;
-  z-index: 1;
+  height: 50px;
+  background-color: rgb(7, 76, 167);
+  display: flex;
+  position: fixed;
+  justify-content: space-around;
+  box-sizing: border-box;
+  align-items: center;
+  flex-direction: row;
 }
 
-.nav-bar{
-    width: 100%;
-    height: 50px;
-    background-color: rgb(7, 76, 167);
-    display: flex;
-    position: fixed;
-    justify-content: space-around;
-    box-sizing: border-box;
-    align-items: center;
-    flex-direction: row;
-}
-
-.nav-bar span{
+header span{
   font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 1px;
   font-family: 'Poppins', sans-serif;
   align-items: center;
   color: white;
 }
 
-.topics{
+.navlist{
   display: flex;
   gap: 30px;
 }
 
-.topics a{
+.navlist a{
   font-family: 'Poppins', sans-serif;
+  font-weight: 500px;
   align-items: center;
   color: white;
   text-decoration: none;
 }
 
-.nav-icon{
-    width: 100%;
-    height: 40px;
-    margin-bottom: 15px;
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    align-items: center;
+.navlist a:hover{
+  color:#000000
 }
 
-.nav-icon img {
+.navlist a.active{
+  color:#000000
+}
+
+.home{
+  width: 100%;
+  height: 100vh;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.home-text{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-right: 0px;
+}
+
+.home-text h1{
+  font-weight: 500;
+}
+
+.home-text span{
+  font-weight: 700;
+  color: rgb(7, 76, 167);
+  font-family: 'Poppins', sans-serif;
+}
+
+.home-icon{
+  width: 100%;
+  height: 40px;
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  align-items: center;
+}
+
+.home-icon img {
   cursor: pointer;
-    width: 25px;
-    height:25px;
-    object-fit: cover;
+  width: 25px;
+  height:25px;
+  object-fit: cover;
 }
 
-.logo:hover{
+.icon:hover{
   width: 35px;
   height: 35px;
 }
 
-.blueColor{
-  font-weight: bold;
-  color: rgb(7, 76, 167);
-  font-family: 'Poppins', sans-serif;
-
-}
-
-.container_aboutme{
+.about{
   display: flex;
   justify-content: center;
-  width: 100%;
-}
-
-.aboutme{
-  display: flex;
-  flex-direction: row;
   align-items: center;
-  width: 50%;
+  width: 100%;
+  height: 60vh;
   padding: 30px;
+ 
 }
 
-.aboutme h1{
-  font-weight: bold;
-  color: rgb(7, 76, 167);
-}
-
-.content_aboutme{
+.about-text{
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
+  width: 50%;
 }
 
-.content_aboutme h1{
-  margin-bottom:0px ;
+.about-text h1{
+  font-weight: bold;
+  color: rgb(7, 76, 167);
+  margin-bottom: 0px;
 }
 
-.aboutme img{
+.portfolio{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 100px;
+}
+
+.portfolio-text{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.portfolio-text h2{
+  font-weight: bold;
+  margin-bottom: 0px;
+}
+
+.portfolio-text span{
+  font-weight: bold;
+  color: rgb(7, 76, 167);
+  margin-bottom: 0px;
+}
+
+.about img{
   width: 300px;
   height: 300px;
   object-fit: cover;
@@ -156,24 +207,10 @@ body {
   box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,rgba(45, 35, 66, 0.3) 0 7px 13px -3px, rgb(0, 0, 0)0 -3px 0 inset;
 }
 
-.container{
-    width: 100%;
-    height: 100vh;
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+.aboutme-text span{
+  font-weight: bold;
 }
 
-.content{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-right: 0px;
-}
 
 .intro h1, h5{
   font-family: 'Poppins', sans-serif;
@@ -234,62 +271,34 @@ body {
   -webkit-transition: all 150ms ease-in-out;
   transition: all 150ms ease-in-out;
 }
+
 .btn_CV:hover {
   box-shadow: 0 0 10px 0 #3498db inset, 0 0 10px 4px #3498db;
   color: #000000;
 }
 
+.portfolio-text span{
+  color:rgb(7, 76, 167) ;
+}
 
-/* Float four columns side by side */
-.column {
+.coloumn{
   display: flex;
+  gap: 30px;
+  justify-content: center;
   flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
+  padding: 10px;
+}
+
+.row{
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.row img{
   width: 100%;
-  margin-bottom: 40px;
+  border-radius: 8px;
+  transition: transform 0.5s;
 }
-
-/* Style the counter cards */
-.card {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 20%;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
-  padding: 16px;
-  text-align: center;
-  background-color: #f1f1f1;
-}
-
-.logos_tec{
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-}
-
-.logos_tec img{
-  width: 30px;
-  height: 30px;
-  object-fit: cover;
-  margin: 0px 10px 10px 0;
-}
-
-.title{
-  font-size: 18px;
-  font-weight: bold;
-  margin-bottom: 10px;
-}
-
-.description{
-  margin-bottom: 20px;
-}
-
-
-
 
 
 

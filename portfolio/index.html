@@ -5,52 +5,124 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="style.css" media="screen" />
     <script src="https://kit.fontawesome.com/2e54c5ce14.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet"
+    href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <script type="text/javascript" src="script.js"></script>
     <title>Portfolio</title>
 </head>
 <body>
-    <div>
-        <div class="background">
-            <div class="bg_black">
-                <header class="nav-bar">
-                    <span>Portfólio.</span>
-                    <ul class="topics">
-                        <a href="">Home</a>
-                        <a href="">About Me</a>
-                        <a href="">Projects</a>
-                    </ul>
-                </header>
-                <section class="container">
-                    <div class="content">
-                        <h1>Olá, <br>Sou o<span class="blueColor"> Ricardo Silva</span>,<br>Desenvolvedor Front-End</h1>
-                        <div class="nav-icon">
-                            <img class="logo" href="" src="/portfolio/img/github-mark-white.png">
-                            <img class="logo" href="" src="/portfolio/img/facebook.png">
-                            <img class="logo" href="" src="/portfolio/img/linkedin.png">
-                        </div>
-                        <h5>Front-End Developer</h5>
-                        <button class="btn-aboutme">Sobre Mim</button>
-                    </div>
-                </section>
+    <div class="principal">
+
+        <!---header design-->
+        <header>
+            <span>Portfólio.</span>
+            <ul class="navlist">
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact me</a></li>
+            </ul>
+        </header>
+
+        <!---home section design--->
+        <section class="home" id="home">
+            <div class="home-text">
+                <h1>Olá, <br>Sou o<span> Ricardo Silva</span>,<br>Desenvolvedor Front-End</h1>
+                <div class="home-icon">
+                    <img class="icon" href="" src="/portfolio/img/github-mark-white.png">
+                    <img class="icon" href="" src="/portfolio/img/facebook.png">
+                    <img class="icon" href="" src="/portfolio/img/linkedin.png">
+                </div>
+                <h5>Front-End Developer</h5>
+                <button class="btn-aboutme">Sobre Mim</button>
             </div>
-        </div>
-        <div class="container_aboutme">
-            <div class="aboutme">
-                <div class="content_aboutme">
+        </section>
+    </div>
+
+        <!---about section design--->
+        <section class="about" id="about">
+                <div class="about-text">
                     <h1>About Me</h1>
                     <span>
                         Portugal, Porto
                         <i class="fa-solid fa-location-pin"></i>
                     </span>
                     <p>Como desenvolvedor front-end possuo um arsenal de skills em HTML, CSS,
-                    JavaScript, React e WordPress.<br>
-                    Estudante de desenvolvimento web e com objetivo de aprender sempre mais linguagens.<br>
-                    Objetivo para o futuro é me tornar um programador full-stack.
+                        JavaScript, React e WordPress.<br>
+                        Estudante de desenvolvimento web e com objetivo de aprender sempre mais linguagens.<br>
+                        Objetivo para o futuro é me tornar um programador full-stack.
                     </p>
                     <button class="btn_CV">Download CV</button>
                 </div>
                 <img src="/portfolio/img/20210508_141554.jpg">
+        </section>
+
+        <!---projects section design--->
+        <section class="portfolio" id="portfolio">
+            <div class="portfolio-text">
+                <p>Portfolio</p>
+                <h2><span>Latest</span> Projects</h2>
             </div>
-        </div>
-    </div>
+
+            <div class="portfolio-content">
+                <div class="coloumn">
+                    <div class="row">
+                        <img src="/portfolio/img/projects/weather.JPG">
+                        <div class="layer">
+                            <h5>Weather App</h5>
+                            <p>Aplicação de meteorologia com sistema de login</p>
+                            <a href="#"><i class='bx bx-link-external'></i></a>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <img src="/portfolio/img/projects/weather.JPG">
+                        <div class="layer">
+                            <h5>CoinFlip Game</h5>
+                            <p>Aplicação de meteorologia com sistema de login</p>
+                            <a href="#"><i class='bx bx-link-external'></i></a>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <img src="/portfolio/img/projects/weather.JPG">
+                        <div class="layer">
+                            <h5>Weather App</h5>
+                            <p>Aplicação de meteorologia com sistema de login</p>
+                            <a href="#"><i class='bx bx-link-external'></i></a>
+                        </div>
+                    </div>
+                </div>   
+
+                <div class="coloumn">
+                    <div class="row">
+                        <img src="/portfolio/img/projects/weather.JPG">
+                        <div class="layer">
+                            <h5>Weather App</h5>
+                            <p>Aplicação de meteorologia com sistema de login</p>
+                            <a href="#"><i class='bx bx-link-external'></i></a>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <img src="/portfolio/img/projects/weather.JPG">
+                        <div class="layer">
+                            <h5>CoinFlip Game</h5>
+                            <p>Aplicação de meteorologia com sistema de login</p>
+                            <a href="#"><i class='bx bx-link-external'></i></a>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <img src="/portfolio/img/projects/weather.JPG">
+                        <div class="layer">
+                            <h5>Weather App</h5>
+                            <p>Aplicação de meteorologia com sistema de login</p>
+                            <a href="#"><i class='bx bx-link-external'></i></a>
+                        </div>
+                    </div>
+                </div>   
+            </div>
+        </section>
 </body>
 </html>

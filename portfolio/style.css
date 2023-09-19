@@ -68,6 +68,7 @@ header{
   box-sizing: border-box;
   align-items: center;
   flex-direction: row;
+  z-index: 1000;
 }
 
 header span{
@@ -169,7 +170,7 @@ header span{
 }
 
 .about-text h1{
-  font-weight: bold;
+  font-weight: 600;
   color: rgb(7, 76, 167);
   margin-bottom: 0px;
 }
@@ -281,15 +282,29 @@ header span{
   color:rgb(7, 76, 167) ;
 }
 
+.portfolio-text{
+  align-items: center;
+}
+
+.portfolio-content{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 32px;
+  margin-top: 80px;
+  padding: 0px 20px 20px 20px;
+}
+
 .coloumn{
   display: flex;
-  gap: 30px;
-  justify-content: center;
   flex-direction: row;
-  padding: 10px;
+  gap: 20px;
 }
 
 .row{
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
   border-radius: 8px;
   cursor: pointer;
 }
@@ -300,8 +315,167 @@ header span{
   transition: transform 0.5s;
 }
 
+.gradiant-card{
+  position: relative;
+}
 
+.gradiant-card::before{
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0%;
+  position: absolute;
+  background: linear-gradient(rgba(0,0,0,0.1), rgb(7, 76, 167));
+  border-radius: 8px;
+  z-index: 1;
+}
 
+.layer{
+  color: white;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  z-index: 1;
+}
 
+.layer h5{
+  font-size: 20px;
+  font-weight:600 ;
+  margin-bottom: 15px;
+}
 
+.layer p{
+  font-size: 16px;
+  line-height: 1.8;
+}
 
+.row:hover img{
+  transform: scale(1.1);
+}
+
+.row:hover .gradiant-card::before{
+  height: 100%;
+}
+
+.row:hover .layer{
+  display: flex;
+}
+
+.contact{
+  color: white;
+  background: rgb(29, 29, 29);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2.5rem;
+  margin-top: 100px;
+  width: 100%;
+}
+
+.contact-container{
+  width: 100%;
+  height: 50vh;
+  margin: 100px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-text h4{
+  margin: 18px 0;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.contact-text h2{
+  font-weight: 600;
+  line-height:1 ;
+}
+
+.contact-text p{
+  line-height: 1.8;
+  margin-bottom: 30px;
+}
+
+.contact-text span{
+  color: rgb(7, 76, 167);
+}
+
+.list a{
+  color: white;
+  text-decoration: none;
+}
+
+.contact-form{
+  position: relative;
+}
+
+.contact-form form input,
+form textarea{
+  font-family: 'Poppins', sans-serif;
+  width: 100%;
+  padding: 14px;
+  background: #3a3a3a;
+  color: #131313;
+  border: none;
+  outline: none;
+  font-size: 15px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.contact-form textarea{
+  resize: none;
+  height: 240px;
+}
+
+.contact-form .submit{
+  font-family: 'Poppins', sans-serif;
+  display: inline-block;
+  font-size: 16px;
+  background: rgb(7, 76, 167);
+  color: white;
+  width: 160px;
+  transition: all .45s ease;
+}
+
+.contact-form .submit:hover{
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.end{
+  padding: 1px 15%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  background: rgb(7, 76, 167);
+}
+
+.last-text p{
+  font-size: 14px;
+  font-family: 'Poppins', sans-serif;
+  color: white;
+}
+
+.top i{
+  padding: 10px;
+  border-radius: 8px;
+  background: #3a3a3a;
+  color: white;
+}
+
+@media (max-width: 1480px){
+  header{
+    padding: 12px 2.5%;
+    transition: .1s;
+  }
+}
